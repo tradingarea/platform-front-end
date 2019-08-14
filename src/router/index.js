@@ -6,17 +6,16 @@ import homeIndex from '@/components/home/index'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
   routes: [{
-        path: '/home',
-        component: baseLayout,
-        children: [
-          {
-            path: 'index',
-            component: homeIndex
-          }
-        ]
-    }]
+    path: '/home',
+    component: baseLayout,
+    children: [
+      {
+        path: 'index',
+        component: homeIndex
+      }
+    ]
+  }]
 })
 
 
