@@ -1,10 +1,10 @@
 <template>
-  <div id="home">
+  <div id="center">
     <mu-flex class="flex-wrapper" justify-content="start">
       <mu-flex class="flex-demo" justify-content="center" >左</mu-flex>
     </mu-flex>
     <mu-flex class="flex-wrapper" justify-content="center">
-      <mu-flex class="flex-demo" justify-content="center" >商家列表</mu-flex>
+      <mu-flex class="flex-demo" justify-content="center" >个人中心</mu-flex>
     </mu-flex>
     <mu-flex class="flex-wrapper" justify-content="end">
       <mu-flex class="flex-demo" justify-content="center" >右</mu-flex>
