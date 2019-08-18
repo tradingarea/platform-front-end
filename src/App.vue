@@ -5,13 +5,11 @@
       <mu-button icon slot="left">
         <mu-icon value="menu"></mu-icon>
       </mu-button>
-      商圈
+      Trading Area
 
       <mu-button flat slot="right">登录</mu-button>
     </mu-appbar>
-
     
-
     <keep-alive>
       <router-view/>
     </keep-alive>

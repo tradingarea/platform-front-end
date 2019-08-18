@@ -7,3 +7,10 @@
 
   </div>
 </template>
+
+<style>
+#base-layout {
+  margin-bottom: 50px;
+}
+</style>
+
