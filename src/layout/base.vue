@@ -10,7 +10,7 @@
 
 <style>
 #base-layout {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 </style>
 

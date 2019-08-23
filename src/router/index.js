@@ -1,7 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import baseLayout from '@/layout/base.vue'
-import homeIndex from '@/components/home/index'
+
+// business 相关
+import businessIndex from '@/components/business/index'
+import detailIndex from '@/components/business/detail'
+
 import chatIndex from '@/components/chat/index'
 import productIndex from '@/components/product/index'
 import centerIndex from '@/components/center/index'
@@ -13,15 +17,19 @@ export default new Router({
     {
       path: '/',
       component: baseLayout,
-      redirect: '/home/index'
+      redirect: '/business/index'
     },
     {
-      path: '/home',
+      path: '/business',
       component: baseLayout,
       children: [
         {
           path: 'index',
-          component: homeIndex
+          component: businessIndex
+        },
+        {
+          path: 'detail',
+          component: detailIndex
         }
       ]
     },

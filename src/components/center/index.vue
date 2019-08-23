@@ -1,18 +1,62 @@
 <template>
   <div id="center">
-    <mu-flex class="flex-wrapper" justify-content="start">
-      <mu-flex class="flex-demo" justify-content="center" >左</mu-flex>
+
+    <mu-flex class="flex-wrapper" justify-content="around" >
+      <mu-avatar color="teal" size="100">
+        W
+      </mu-avatar>
     </mu-flex>
-    <mu-flex class="flex-wrapper" justify-content="center">
-      <mu-flex class="flex-demo" justify-content="center" >个人中心</mu-flex>
+
+    <mu-flex class="flex-wrapper" align-items="around">
+      <mu-container>
+        <mu-paper :z-depth="2">
+          <mu-list>
+            <mu-list-item>
+              <mu-list-item-action>
+                <mu-icon value="info"></mu-icon>
+              </mu-list-item-action>
+              <mu-list-item-content>
+                <mu-list-item-title>会员权益</mu-list-item-title>
+              </mu-list-item-content>
+            </mu-list-item>
+          </mu-list>
+        </mu-paper>
+      </mu-container>
     </mu-flex>
-    <mu-flex class="flex-wrapper" justify-content="end">
-      <mu-flex class="flex-demo" justify-content="center" >右</mu-flex>
-    </mu-flex>
-    <mu-flex class="flex-wrapper" align-items="center">
-      <mu-flex class="flex-demo" justify-content="center" fill>左</mu-flex>
-      <mu-flex class="flex-demo" justify-content="center" fill>中</mu-flex>
-      <mu-flex class="flex-demo" justify-content="center" fill>右</mu-flex>
+
+    <mu-flex class="flex-wrapper" align-items="around">
+      <mu-container>
+        <mu-paper :z-depth="2">
+          <mu-list>
+            <mu-list-item>
+              <mu-list-item-action>
+                <mu-icon value="settings"></mu-icon>
+              </mu-list-item-action>
+              <mu-list-item-content>
+                <mu-list-item-title>Setting</mu-list-item-title>
+              </mu-list-item-content>
+            </mu-list-item>
+            <mu-divider></mu-divider>
+            <mu-list-item>
+              <mu-list-item-action>
+                <mu-icon value="help_outline"></mu-icon>
+              </mu-list-item-action>
+              <mu-list-item-content>
+                <mu-list-item-title>Help</mu-list-item-title>
+              </mu-list-item-content>
+            </mu-list-item>
+            <mu-divider></mu-divider>
+            <mu-list-item>
+              <mu-list-item-action>
+                <mu-icon value="power_settings_new"></mu-icon>
+              </mu-list-item-action>
+              <mu-list-item-content>
+                <mu-list-item-title>Exit</mu-list-item-title>
+              </mu-list-item-content>
+            </mu-list-item>
+          </mu-list>
+        </mu-paper>
+      </mu-container>
     </mu-flex>
   </div>
 </template>
@@ -25,22 +69,6 @@ export default {
 
 <style scoped>
 .flex-wrapper {
-  width: 100%;
-  height: 56px;
-  margin-top: 8px;
-}
-.flex-demo {
-  width: 200px;
-  height: 32px;
-  background-color: #e0e0e0;
-  text-align: center;
-  line-height: 32px;
-  margin-left: 8px;
-}
-.flex-wrapper:first-child {
-  margin-top: 0;
-}
-.flex-demo:first-child {
-  margin-left: 0;
+  margin-top: 20px;
 }
 </style>

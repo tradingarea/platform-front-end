@@ -16,7 +16,7 @@
 
     <mu-container class="tabbar">
       <mu-bottom-nav>
-        <mu-bottom-nav-item title="首页" icon="home" to="/home/index"></mu-bottom-nav-item>
+        <mu-bottom-nav-item title="首页" icon="home" to="/business/index"></mu-bottom-nav-item>
         <mu-bottom-nav-item title="群聊" icon="restore" to="/chat/index"></mu-bottom-nav-item>
         <mu-bottom-nav-item title="充值" icon="location_on" to="/product/index"></mu-bottom-nav-item>
         <mu-bottom-nav-item title="我的" icon="favorite" to="/center/index"></mu-bottom-nav-item>

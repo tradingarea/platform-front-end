@@ -68,7 +68,7 @@
         <mu-paper :z-depth="1" class="box-list-wrap">
           <mu-list textline="three-line">
             <mu-sub-header>更多优惠</mu-sub-header>
-            <mu-list-item avatar :ripple="false" button>
+            <mu-list-item avatar :ripple="false" button @click="listItemClick">
               <div class="box-list-left">
                 <div class="box-list-img">
                   <img src="../../assets/images/carousel1.jpg">
@@ -82,7 +82,7 @@
               </div>
             </mu-list-item>
             <mu-divider></mu-divider>
-            <mu-list-item avatar :ripple="false" button>
+            <mu-list-item avatar :ripple="false" button @click="listItemClick">
               <div class="box-list-left">
                 <div class="box-list-img">
                   <img src="../../assets/images/carousel2.jpg">
@@ -97,7 +97,7 @@
               </div>
             </mu-list-item>
             <mu-divider></mu-divider>
-            <mu-list-item avatar :ripple="false" button>
+            <mu-list-item avatar :ripple="false" button @click="listItemClick">
               <div class="box-list-left">
                 <div class="box-list-img">
                   <img src="../../assets/images/carousel3.jpg">
@@ -112,7 +112,7 @@
               </div>
             </mu-list-item>
             <mu-divider></mu-divider>
-            <mu-list-item avatar :ripple="false" button>
+            <mu-list-item avatar :ripple="false" button @click="listItemClick">
               <div class="box-list-left">
                 <div class="box-list-img">
                   <img src="../../assets/images/carousel4.jpg">
@@ -148,6 +148,11 @@ export default {
       carouselImg3,
       carouselImg4
     }
+  },
+  methods: {
+    listItemClick() {
+      this.$router.push('/business/detail')
+    }
   }
 }
 </script>
@@ -162,7 +167,7 @@ export default {
   overflow: hidden;
 }
 .box-list-wrap .box-list-left {
-  width: 70%;
+  width: 60%;
 }
 .box-list-wrap .box-list-img {
   width: 100px;
