@@ -4,24 +4,21 @@
     <mu-flex class="flex-wrapper" align-items="center">
       <mu-container>
         <mu-card style="width: 100%; max-width: 375px; margin: 0 auto;">
-          <mu-card-header title="Myron Avatar" sub-title="sub title">
+          <mu-card-header :title="user.name" sub-title="永恒钻石">
             <mu-avatar slot="avatar">
-              <img src="../../assets/images/uicon.jpg">
+              <span v-html=user.avatar></span>
             </mu-avatar>
           </mu-card-header>
-          <mu-card-media title="Image Title" sub-title="Image Sub Title">
-            <img src="../../assets/images/sun.jpg">
+          <mu-card-media class="detail-media" :title="business.name" :sub-title="business.introduction">
+            <span v-html=business.picture></span>
           </mu-card-media>
-          <mu-card-title title="Content Title" sub-title="Content Title"></mu-card-title>
+          <mu-card-title title="优惠详情" :sub-title="business.updatetime"></mu-card-title>
           <mu-card-text>
-            散落在指尖的阳光，我试着轻轻抓住光影的踪迹，它却在眉宇间投下一片淡淡的阴影。
-            调皮的阳光掀动了四月的心帘，温暖如约的歌声渐起。
-            似乎在诉说着，我也可以在漆黑的角落里，找到阴影背后的阳光，
-            找到阳光与阴影奏出和谐的旋律。我要用一颗敏感赤诚的心迎接每一缕滑过指尖的阳光！
+            {{business.detail}}
           </mu-card-text>
           <mu-card-actions>
-            <mu-button flat>Action 1</mu-button>
-            <mu-button flat>Action 2</mu-button>
+            <mu-button flat>加入会员</mu-button>
+            <mu-button flat>进入群聊</mu-button>
           </mu-card-actions>
         </mu-card>
       </mu-container>
@@ -35,8 +32,21 @@ export default {
   name: 'Index-detail',
   data () {
     return {
-      
+      business: {},
+      user: {}
     }
+  },
+  mounted () {
+    let id = this.$route.query.id
+    this.axios.get(`/api/bussiness/findById?id=${id}`).then(res => {
+      this.business = res.data.data
+      this.axios.get(`/api/user/findById?id=${res.data.data.userid}`).then(res => {
+        this.user = res.data.data
+
+        console.log(this.business)
+        console.log(this.user)
+      })
+    })
   }
 }
 </script>
@@ -44,5 +54,8 @@ export default {
 <style scoped>
 .flex-wrapper {
   margin-top: 20px;
+}
+.detail-media >>> img {
+  width: 100%;
 }
 </style>
